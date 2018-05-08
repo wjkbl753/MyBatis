@@ -1,7 +1,6 @@
-# MyBatis
+# 简介
 
-> 是一个半自动ORM框架，我们需要在XML中书写sql语句，方便修改
+## 本文档定位?
 
-> Hibernate,全自动ORM框架，程序员不需要写sql语句，目的在消除sql
-
+本文档旨在帮助初学者快速上手MyBatis框架,去掉官方文档中不常用的特性讲解，一切以实际应用为出发点，，如果想对MyBatis框架有更加深入的了解，请移步至[官方文档](http://www.mybatis.org/mybatis-3/zh/index.html)： 
 
