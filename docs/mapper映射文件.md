@@ -79,16 +79,20 @@ public interface UserMapper {
 还有一个重要属性为`resultMap`，随后介绍
 
 
-?>示例： 增，删，改
+?>示例： 增加
 
 *java代码*
 
 ```java
-
+public boolean insert(User user);
 ```
 
 *对应的xml*
 
 ```xml
-
+<insert id="insert">
+	insert into user values(#{id},#{userName},#{gender},#{email})
+</insert>
 ```
+
+!>insert标签中，

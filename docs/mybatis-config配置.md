@@ -8,7 +8,7 @@ MyBatis 的配置文件包含了会深深影响 MyBatis 行为的设置（settin
 
 此配置可以把数据库连接信息配置到另外一个配置文件中，实际工作中数据库连接一般交给Spring管理，此配置一般不用
 
-## setting设置
+## setting设置👉 
 
 ```xml
 <settings>
