@@ -4,11 +4,11 @@ MyBatis 的配置文件包含了会深深影响 MyBatis 行为的设置（settin
 
 ![](img/MyBatis配置.png)
 
-### properties属性
+## properties属性
 
 此配置可以把数据库连接信息配置到另外一个配置文件中，实际工作中数据库连接一般交给Spring管理，此配置一般不用
 
-### setting设置
+## setting设置
 
 ```xml
 <settings>
@@ -21,7 +21,7 @@ MyBatis 的配置文件包含了会深深影响 MyBatis 行为的设置（settin
 例如：
 `数据库中 user_name 可以自动映射为java实体类中的 userName`
 
-### typeAliases 类型别名
+## typeAliases 类型别名
 
 映射文件中,默认只能写全类名：
 配置此项后，可以给全类名起别名，在映射文件中方便书写：
@@ -81,11 +81,11 @@ arraylist	ArrayList
 collection	Collection
 iterator	Iterator
 ```
-### typeHandlers 类型处理器
+## typeHandlers 类型处理器
 
 数据库中的类型和java类型的映射都是依靠此类型处理器，比如数据库的char,varchar将会映射为java的String类型，一般不需要再单独设配置
 
-### environments 环境
+## environments 环境
 
 ```xml
 <environments default="development">
@@ -117,7 +117,7 @@ iterator	Iterator
 
 我们可以配置多个数据库连接信息，比如开发阶段连接一个，测试阶段连接另一个，只需要修改default的值即可
 
-### mapper映射器
+## mapper映射器
 
 MyBatis-config需要加载所有的映射xml文件
 
