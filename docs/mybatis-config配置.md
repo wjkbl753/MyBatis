@@ -1,4 +1,4 @@
-# MyBatis-config.xml配置
+## MyBatis-config.xml配置
 
 > MyBatis 的配置文件包含了会深深影响 MyBatis 行为的设置（settings）和属性（properties）信息。文档的顶层结构如下：
 
