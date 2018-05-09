@@ -51,36 +51,37 @@
 ```
 
 此外一些最基本的变量类型在映射文件中也不需要写全类名，MyBatis已经帮我们做了默认别名
-```text
-别名       映射的类型
-_byte	    byte
-_long	    long
-_short	    short
-_int	    int
-_integer	int
-_double	    double
-_float	    float
-_boolean	boolean
-string	    String
-byte	    Byte
-long	    Long
-short	    Short
-int     	Integer
-integer	    Integer
-double  	Double
-float	    Float
-boolean	    Boolean
-date	    Date
-decimal 	BigDecimal
-bigdecimal	BigDecimal
-object  	Object
-map	        Map
-hashmap	    HashMap
-list	    List
-arraylist	ArrayList
-collection	Collection
-iterator	Iterator
-```
+
+别名     |  映射的类型
+---------|---------------
+_byte	   | byte
+_long	   | long
+_short	 |    short
+_int	   | int
+_integer |	int
+_double	 |   double
+_float	 |   float
+_boolean |	boolean
+string	 |   String
+byte	   | Byte
+long	   | Long
+short	   |  Short
+int      |	Integer
+integer	 |   Integer
+double   |	Double
+float	   | Float
+boolean	 |   Boolean
+date	   | Date
+decimal  |	BigDecimal
+bigdecimal|	BigDecimal
+object   |	Object
+map	     |  Map
+hashmap	  | HashMap
+list	   | List
+arraylist|	ArrayList
+collection	|Collection
+iterator	|Iterator
+
 ## typeHandlers 类型处理器
 
 数据库中的类型和java类型的映射都是依靠此类型处理器，比如数据库的char,varchar将会映射为java的String类型，一般不需要再单独设配置
