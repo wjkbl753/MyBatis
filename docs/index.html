@@ -13,9 +13,21 @@
   <script>
 	  window.$docsify = {
 		loadSidebar: true,
-		subMaxLevel: 3
+		subMaxLevel: 3,
+    name: 'MyBatis',
+    search: {
+        noData: {
+          '/': '没有结果!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/': '搜索'
+        },
+        depth: 2
+      }
 	  }
 </script>
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 </body>
 </html>
