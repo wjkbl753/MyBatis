@@ -1,6 +1,6 @@
 # MyBatis-config.xml配置
 
-MyBatis 的配置文件包含了会深深影响 MyBatis 行为的设置（settings）和属性（properties）信息。文档的顶层结构如下：
+> MyBatis 的配置文件包含了会深深影响 MyBatis 行为的设置（settings）和属性（properties）信息。文档的顶层结构如下：
 
 ![](img/MyBatis配置.png)
 
@@ -42,7 +42,7 @@ MyBatis 的配置文件包含了会深深影响 MyBatis 行为的设置（settin
 
 !> 上面配置会有默认别名 user ,别名是不区分大小写的，我们在映射文件中还是建议使用User
 
-`最优方案 一个一个写别名又很麻烦，所以直接指定实体类所在的包，包下所有实体类都会设置别名`
+?> 最优方案👉 一个一个写别名又很麻烦，所以直接指定实体类所在的包，包下所有实体类都会设置别名
 
 ```xml
 <typeAliases>
@@ -129,7 +129,7 @@ MyBatis-config需要加载所有的映射xml文件
   <mapper class="org.mybatis.builder.PostMapper"/>
 </mappers>
 ```
-`最优方案：每次写一个配置文件都要在此配置太麻烦，我们还是采用包配置`
+?> 最优方案👉：每次写一个配置文件都要在此配置太麻烦，我们还是采用包配置
 
 ```xml
 <!-- 将包内的映射器接口实现全部注册为映射器 -->

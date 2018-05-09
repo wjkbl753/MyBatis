@@ -1,6 +1,6 @@
 # Mapper XML 文件
 
-MyBatis 的真正强大在于它的映射语句，也是它的魔力所在。相当于之前的dao层实现类
+> MyBatis 的真正强大在于它的映射语句，也是它的魔力所在。相当于之前的dao层实现类
 
 ## 基本结构：
 
@@ -32,7 +32,7 @@ namespace-命名空间，一般和接口名同名，不能使用别名，
 
 按规范书写给人的感觉将非常舒适：namespace写类名，下面的id写方法名
 
-?>示例： 查找单个对象
+> 示例： 查找单个对象
 
 *java代码*
 
@@ -54,7 +54,7 @@ public interface UserMapper {
 
 !>如果就一个普通参数，上面的id可以换成其他任意字符，多个参数的情况随后讲解
 
-?>示例： 查找多个对象放到List中
+> 示例： 查找多个对象放到List中
 
 *java代码*
 
@@ -79,7 +79,7 @@ public interface UserMapper {
 还有一个重要属性为`resultMap`，随后介绍
 
 
-?>示例： 增加，删除，修改，(写法基本一致)
+> 示例： 增加，删除，修改，(写法基本一致)
 
 *java代码*
 
@@ -116,3 +116,40 @@ public int update(User user);
 
 !>总结：增加删除修改标签中，只有id属性是必须的，如果java接口上类型是boolean，那么结果就是true或者false，如果接口上写int，返回结果就是操作行数
 
+## 参数传递
+
+>  单个普通参数：直接使用#{参数名}进行取值，mybatis没做特殊处理，参数名可以随便写。
+
+  ---
+
+>  多个参数：
+    Mybatis会默认构建一个map，键是param1,param2....，值是对应传入的实参,拿参的时候直接写键名就可以，所以可以使用#{param1}，#{param2}取值
+    
+    `最优方案：我们可以使用注解(@Param("键名"))指定map的键名：`
+
+```java
+  public List<User>selectAllByCondition(@Param("id")int id,@Param("userName")String userName);
+```
+```xml
+  <select id="selectAllByCondition" resultType="User">
+  	select * from user where id=#{id} and user_name=#{userName}
+  </select>
+```
+
+  ---
+
+> 参数为map，和bean：
+
+```java
+  public List<User>selectAllByConditionMap(Map map);
+  public List<User>selectAllByConditionBean(User user);
+```
+```xml
+  <select id="selectAllByCondition" resultType="User">
+  	select * from user where id=#{id} and user_name=#{userName}
+  </selec
+```
+
+  ---
+  
+> 传入list，数组的形式
