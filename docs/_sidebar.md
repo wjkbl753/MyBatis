@@ -1,16 +1,16 @@
 * 🐶 入门 
 
-   * [简介](简介)
-   * [起步](起步)
+   * [简介](jianjie)
+   * [起步](qibu)
 
 * 🦄 核心配置 
 
-    * [配置项](mybatis-config配置)
+    * [配置项](mybatis-config)
 
 * 🐹 映射文件 
 
-    * [概述](概述)
+    * [概述](gaishu)
     * [CRUD](CRUD)
-    * [参数传递](参数传递)
-    * [复杂映射](复杂映射)
+    * [参数传递](canshuchuandi)
+    * [复杂映射](fuzayingshe)
 
