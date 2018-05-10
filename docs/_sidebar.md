@@ -7,10 +7,15 @@
 
     * [配置项](mybatis-config)
 
-* 🐹 映射文件 
+* 🐹 映射文件配置
 
     * [概述](gaishu)
     * [CRUD](CRUD)
     * [参数传递](canshuchuandi)
-    * [复杂映射](fuzayingshe)
+
+* 🙈 进阶用法
+
+     * [复杂映射](fuzayingshe)
+     * [动态SQL](dongtaiSQL)
+    
 
