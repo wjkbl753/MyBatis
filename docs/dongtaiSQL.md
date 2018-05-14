@@ -3,19 +3,19 @@
 动态 SQL 元素和使用 JSTL 或其他类似基于 XML 的文本处理器相似
 
 主要标签：
-- if
-- trim (where, set)
-- foreach
+- `if`
+- `trim (where, set)`
+- `foreach`
 
 ## If
 
-使用场景1：
-查询用户，搜索条件可以是user_name,gender,email中的任意多个，使用if标签可以方便快速的解决，省去繁琐的sql拼接代码
+    使用场景1：
+    查询用户，搜索条件可以是user_name,gender,email中的任意多个，使用if标签可以方便快速的解决，省去繁琐的sql拼接代码
 
-使用场景2：
-类似的在修改时，因为我们不知道具体修改哪几列，我们需要先查询出数据的全部数据，再把要修改的数据做替换。而利用If标签可以只对要修改的列进行修改，不需要先查询数据
+    使用场景2：
+    类似的在修改时，因为我们不知道具体修改哪几列，我们需要先查询出数据的全部数据，再把要修改的数据做替换。而利用If标签可以只对要修改的列进行修改，不需要先查询数据
 
-多条件搜索：
+`多条件搜索：`
 
 ```xml
  <select id="selectAllSearch" resultType="User">
@@ -34,7 +34,7 @@
 
 ## Where
 
-> 上面示例中，where后面跟了1=1,mybatis觉得这种处理方式不雅，加入where标签。可以智能识别 `and` 和`or`,把多出来的and或者or去掉
+    上面示例中，where后面跟了1=1,mybatis觉得这种处理方式不雅，加入where标签。可以智能识别 `and` 和`or`,把多出来的and或者or去掉
 
 ```xml
 <select id="selectAllSearch" resultType="User">
@@ -53,7 +53,7 @@
 </select>
 ```
 
-##Set
+## Set
 
 去掉修改案例中可能多余的,
 ```xml
