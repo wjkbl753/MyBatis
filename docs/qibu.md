@@ -25,10 +25,34 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
 ## 新建工程并导包
 
 新建一个javase工程
-
-![](img/工程.png)
-
-?> 将[mybatis-3.4.1.jar](/jar/mybatis-3.4.1.jar),[mysql驱动](/jar/mysql-connector-java-5.1.14.jar) 和 [log4j.jar](/jar/log4j.jar) 置与 `classpath` 中
+```xml
+<dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.4.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.14</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.25</version>
+      <scope>test</scope>
+    </dependency>
+```
+将 [Log4j.xml](jar/Log4j.zip) 置与 `classpath` 中
 
 ---
 
@@ -54,7 +78,7 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
     </environment>
   </environments>
   <mappers>
-    <mapper resource="org/mybatis/example/BlogMapper.xml"/>
+    <mapper resource="UserMapper.xml"/>
   </mappers>
 </configuration>
 ```
@@ -95,7 +119,7 @@ public interface UserMapper {
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.weixin.dao.UserMapper">
-  <select id="selectAll" resultType="User">
+  <select id="selectAll" resultType="com.weixin.bean.User">
     select * from user
   </select>
 </mapper>
