@@ -52,7 +52,7 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
       <scope>test</scope>
     </dependency>
 ```
-将 [Log4j.xml](jar/Log4j.zip) 置与 `classpath` 中
+将 [Log4j.xml或log4j.properties](jar/Log4j.zip) 置与 `classpath` 中
 
 ---
 
@@ -71,7 +71,7 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
       <transactionManager type="JDBC"/>
       <dataSource type="POOLED">
         <property name="driver" value="${driver}"/>
-        <property name="url" value="${url}"/>
+        <property name="url" value="${url}?useUnicode=true&amp;characterEncoding=UTF-8"/>
         <property name="username" value="${username}"/>
         <property name="password" value="${password}"/>
       </dataSource>

@@ -61,6 +61,9 @@ public int update(User user);
     where id=#{id}
 </update>
 ```
-
+```java
+//mybatis默认开启事务，执行完毕执行需要提交事务
+session.commit();
+```
 
 !>总结：增加删除修改标签中，只有id属性是必须的，如果java接口上类型是boolean，那么结果就是true或者false，如果接口上写int，返回结果就是操作行数
