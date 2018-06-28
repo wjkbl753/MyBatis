@@ -77,9 +77,9 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
       </dataSource>
     </environment>
   </environments>
-  <mappers>
+<!-- <mappers>
     <mapper resource="UserMapper.xml"/>
-  </mappers>
+  </mappers> -->
 </configuration>
 ```
 !>mybatis新版本支持`面向接口编程`，程序员`不需要`再写接口的实现类，转而用配置文件代替：
