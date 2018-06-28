@@ -70,8 +70,8 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
     <environment id="development">
       <transactionManager type="JDBC"/>
       <dataSource type="POOLED">
-        <property name="driver" value="${driver}"/>
-        <property name="url" value="${url}?useUnicode=true&amp;characterEncoding=UTF-8"/>
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/database?useUnicode=true&amp;characterEncoding=UTF-8"/>
         <property name="username" value="${username}"/>
         <property name="password" value="${password}"/>
       </dataSource>
