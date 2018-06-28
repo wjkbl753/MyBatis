@@ -3,7 +3,7 @@
     直接使用#{参数名}进行取值，mybatis没做特殊处理，参数名可以随便写。
 
 
-## 单个参数，参数为map，和bean
+## 单个参数-参数为map，和bean
 
 ```java
   public List<User>selectAllByConditionMap(Map map);
@@ -14,7 +14,7 @@
   	select * from user where id=#{id} and user_name=#{userName}
   </selec
 ```
-## 单个参数，参数为list，数组的形式
+## 单个参数-参数为list，数组的形式
 传入list,默认的键是 list
 传入数组,默认的键是array
 建议使用 @Param()指定建名
