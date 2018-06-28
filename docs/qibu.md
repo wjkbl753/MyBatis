@@ -66,6 +66,9 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+  <!--<typeAliases>
+      <package name="com.weixin.vo"/>
+  </typeAliases> -->
   <environments default="development">
     <environment id="development">
       <transactionManager type="JDBC"/>
