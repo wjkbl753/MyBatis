@@ -52,7 +52,7 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
       <scope>test</scope>
     </dependency>
 ```
-将 [Log4j.xml或log4j.properties](jar/log4j.zip) 置与 `classpath` 中
+将 [Log4j.xml或log4j.properties](jar/log4j.zip ':ignore') 置与 `classpath` 中
 
 ---
 
