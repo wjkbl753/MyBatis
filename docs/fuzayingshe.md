@@ -62,27 +62,9 @@ private ClassRoom classRoom;
 ```
 
 
-> 写法1 (级联方式)
 
-```xml
-  <resultMap type="User" id="userClassRoomResultMap">
-  	<id property="id" column="id"/>
-  	<result property="userName" column="user_name"/>
-  	<result property="gender" column="gender"/>
-  	<result property="email" column="email"/>
-  	<result property="classRoom.cId" column="c_id"/>
-  	<result property="classRoom.name" column="cname"/>
-  </resultMap>
 
-  <select id="selectUserClassRoomById" resultMap="userClassRoomResultMap">
-  		select user.*,classroom.name cname
-  		from user left join classroom
-  		on user.c_id=classroom.c_id
-  		where id=#{id}
-  </select> 
-```
-
-> 写法2 (描述单个对象用association)
+> 写法1 (描述单个对象用association)
 
 ```xml
  <resultMap type="User" id="userClassRoomResultMap2">
@@ -103,7 +85,28 @@ private ClassRoom classRoom;
 ```
 !>本身resultMap可以使用默认映射，但是当resultMap中出现association之类的其他特殊标签时，默认映射会失效，所以建议写全属性
 
-> 写法3 (Mybatis特有的分布查询+延迟加载) -- `最优`
+
+> <del>写法2 (级联方式)</del>
+
+```xml
+  <resultMap type="User" id="userClassRoomResultMap">
+  	<id property="id" column="id"/>
+  	<result property="userName" column="user_name"/>
+  	<result property="gender" column="gender"/>
+  	<result property="email" column="email"/>
+  	<result property="classRoom.cId" column="c_id"/>
+  	<result property="classRoom.name" column="cname"/>
+  </resultMap>
+
+  <select id="selectUserClassRoomById" resultMap="userClassRoomResultMap">
+  		select user.*,classroom.name cname
+  		from user left join classroom
+  		on user.c_id=classroom.c_id
+  		where id=#{id}
+  </select> 
+```
+
+> <del>写法3 (Mybatis特有的分布查询+延迟加载) </del>
 
 *UserMapper.xml*
 
@@ -152,15 +155,7 @@ private ClassRoom classRoom;
 ## 多对一 --查询List
 查询所有的用户，同时查询用户所在的班级信息
 
-> 写法1 (级联方式)
-
-```xml  
-   <select id="selectAllPlus" resultMap="selectAllPlusResultMap">
-  	 select user.*,classroom.name cname from user left join classroom
-  	 on user.c_id=classroom.c_id
-  </select> 
-```
-> 写法2 (association)
+> 写法1 (association)
 
 ```xml  
    <select id="selectAllPlus" resultMap="selectAllPlusResultMap2">
@@ -168,7 +163,17 @@ private ClassRoom classRoom;
   	 on user.c_id=classroom.c_id
   </select> 
 ```
->写法3 (分步+延迟)
+
+> <del>写法2 (级联方式)</del>
+
+```xml  
+   <select id="selectAllPlus" resultMap="selectAllPlusResultMap">
+  	 select user.*,classroom.name cname from user left join classroom
+  	 on user.c_id=classroom.c_id
+  </select> 
+```
+
+><del>写法3 (分步+延迟)<del>
 
 ```xml
    <select id="selectAllPlus" resultMap="selectAllPlusResultMap3">
@@ -222,7 +227,7 @@ private List<User> userList;
   </select>
 ```
 
-> 写法2 (分步+延迟)  --对应assocition  此处已经没有级联写法
+> <del>写法2 (分步+延迟)</del>
 
 *ClassRoomMapper.xml*
 
@@ -255,7 +260,7 @@ private List<User> userList;
   	</select>
 ```
 
-> 写法2 (分步+延迟)  --对应assocition  也已经没有级联写法
+> <del>写法2 (分步+延迟)</del>
 
 ```xml
   	<select id="selectClassRoomUserStep" resultMap="classRoomUserResultMap2">

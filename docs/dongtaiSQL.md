@@ -76,7 +76,7 @@
 
 ## Trim
 
-trim是where 和 set的通用版，不建议使用(where,set看起来更加直观)
+trim 可在之前之后都加元素，可代替where或者set(但是不建议)
 
 ```xml
   <select id="selectAllSearch" resultType="User">
