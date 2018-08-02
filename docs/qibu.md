@@ -51,6 +51,15 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
       <version>1.7.25</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+  <!-- <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.0</version>
+      <scope>provided</scope>
+  </dependency> -->
+
 ```
 将 [Log4j.xml或log4j.properties](jar/log4j.zip ':ignore') 置与 `classpath` 中
 
@@ -85,7 +94,6 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
   </mappers> -->
 </configuration>
 ```
-!>mybatis新版本支持`面向接口编程`，程序员`不需要`再写接口的实现类，转而用配置文件代替：
 
 ---
 
@@ -111,6 +119,7 @@ public interface UserMapper {
 	public List<Employee> selectAll()throws SQLException;
 }
 ```
+!>mybatis新版本支持`面向接口编程`，程序员`不需要`再写接口的实现类，转而用配置文件代替：
 
 ## 创建UserMapper的映射文件 UserMapper.xml：
 

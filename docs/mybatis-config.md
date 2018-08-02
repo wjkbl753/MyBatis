@@ -50,38 +50,6 @@
 </typeAliases>
 ```
 
-此外一些最基本的变量类型在映射文件中也不需要写全类名，MyBatis已经帮我们做了默认别名
-
-别名     |  映射的类型
----------|---------------
-_byte	   | byte
-_long	   | long
-_short	 |    short
-_int	   | int
-_integer |	int
-_double	 |   double
-_float	 |   float
-_boolean |	boolean
-string	 |   String
-byte	   | Byte
-long	   | Long
-short	   |  Short
-int      |	Integer
-integer	 |   Integer
-double   |	Double
-float	   | Float
-boolean	 |   Boolean
-date	   | Date
-decimal  |	BigDecimal
-bigdecimal|	BigDecimal
-object   |	Object
-map	     |  Map
-hashmap	  | HashMap
-list	   | List
-arraylist|	ArrayList
-collection	|Collection
-iterator	|Iterator
-
 ## typeHandlers 类型处理器
 
 数据库中的类型和java类型的映射都是依靠此类型处理器，比如数据库的char,varchar将会映射为java的String类型，一般不需要再单独设配置
@@ -118,26 +86,3 @@ iterator	|Iterator
 
 我们可以配置多个数据库连接信息，比如开发阶段连接一个，测试阶段连接另一个，只需要修改default的值即可
 
-## mapper映射器
-
-MyBatis-config需要加载所有的映射xml文件
-
-```xml
-<!-- 使用映射器接口实现类的完全限定类名 -->
-<mappers>
-  <mapper class="org.mybatis.builder.AuthorMapper"/>
-  <mapper class="org.mybatis.builder.BlogMapper"/>
-  <mapper class="org.mybatis.builder.PostMapper"/>
-</mappers>
-```
-?> 最优方案👉：每次写一个配置文件都要在此配置太麻烦，我们还是采用包配置
-
-```xml
-<!-- 将包内的映射器接口实现全部注册为映射器 -->
-<mappers>
-  <package name="oom.weixin.dao"/>
-</mappers>
-```
-
-!> 此配置要求映射文件和dao文件同名而且在同一目录下
-默认会把类名映射，比如User会映射为user，如果多个包下有同名类名的情况，我们可以注解指定别名：在类名上添加@Alias("user")
