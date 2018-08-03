@@ -123,7 +123,7 @@ public interface UserMapper {
 
 ## 创建UserMapper的映射文件 UserMapper.xml：
 
-*UserMapper.xml*  (`此文件需要和dao文件同名，并且放在同一目录下`)
+*UserMapper.xml*  (`此文件需要和dao文件同名`)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
