@@ -31,11 +31,11 @@ public interface UserMapper {
 *banji.sql*
 
 ```sql
-DROP TABLE IF EXISTS `classroom`;
-CREATE TABLE `classroom` (
-  `c_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`c_id`)
+DROP TABLE IF EXISTS classroom;
+CREATE TABLE classroom (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(255) DEFAULT NULL,
+  PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -45,7 +45,6 @@ INSERT INTO `classroom` VALUES ('1', '一班');
 INSERT INTO `classroom` VALUES ('2', '二班');
 INSERT INTO `classroom` VALUES ('3', '三班');
 
---修改user表，增加一个外检字段 c_id
 ```
 
 ## 多对一 --查询单对象
@@ -267,5 +266,3 @@ private List<User> userList;
   		select * from classroom
   	</select>
 ```
-
-!>mybatis还提出了个一对一，其实就是一表分成了2表，按多对一写法即可
