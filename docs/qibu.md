@@ -19,19 +19,23 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
+INSERT INTO `user` VALUES ('1', '小明', '0', 'xiaoming@163.com');
+INSERT INTO `user` VALUES ('2', '小红', '1', 'xiaohong@163.com');
+INSERT INTO `user` VALUES ('3', '小花', '1', 'xiaohua@163.com');
 ```
 
 ## 新建工程并导包
 
 新建一个javase工程
 ```xml
-<dependency>
+  <!--
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+     -->
     <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
     <dependency>
       <groupId>org.mybatis</groupId>
@@ -45,12 +49,12 @@ INSERT INTO `user` VALUES ('1', '小明', '1', 'xiaoming@163.com');
       <version>5.1.14</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
-    <dependency>
+   <!-- <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>1.7.25</version>
       <scope>test</scope>
-    </dependency>
+    </dependency>-->
 
     <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
   <!-- <dependency>
@@ -116,7 +120,7 @@ public class User{
 
 ```java
 public interface UserMapper {
-	public List<Employee> selectAll()throws SQLException;
+	public List<User> selectAll()throws SQLException;
 }
 ```
 !>mybatis新版本支持`面向接口编程`，程序员`不需要`再写接口的实现类，转而用配置文件代替：
