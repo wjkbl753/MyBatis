@@ -120,7 +120,7 @@ public class User{
 
 ```java
 public interface UserMapper {
-	public List<User> selectAll()throws SQLException;
+	   List<User> selectAll();
 }
 ```
 !>mybatis新版本支持`面向接口编程`，程序员`不需要`再写接口的实现类，转而用配置文件代替：
@@ -146,7 +146,7 @@ public interface UserMapper {
 ```java
 public class UserTest {
 	@Test
-	public void selectAll() throws IOException, SQLException {
+	public void selectAll() throws IOException{
     //加载mybatis-config.xml到输入流
 		InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
     //通过输入流构建SqlSessionFactory对象

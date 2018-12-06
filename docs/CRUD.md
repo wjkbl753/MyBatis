@@ -19,7 +19,7 @@ public interface UserMapper {
 
 ```java
 public interface UserMapper {
-	public List<User> selectAll();
+	   List<User> selectAll();
 }
 ```
 ```xml
