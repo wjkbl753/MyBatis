@@ -10,7 +10,7 @@
 ## If
 
     使用场景1：
-    查询用户，搜索条件可以是user_name,gender,email中的任意多个，使用if标签可以方便快速的解决，省去繁琐的sql拼接代码
+    查询用户，搜索条件可以是userName,gender,email中的任意多个，使用if标签可以方便快速的解决，省去繁琐的sql拼接代码
 
     使用场景2：
     类似的在修改时，因为我们不知道具体修改哪几列，我们需要先查询出数据的全部数据，再把要修改的数据做替换。而利用If标签可以只对要修改的列进行修改，不需要先查询数据
@@ -20,7 +20,7 @@
 ```xml
  <select id="selectAllSearch" resultType="User">
   		select * from user where 1=1
-  		<if test="user_name!=null">
+  		<if test="name!=null">
   			and user_name like #{user_name}
   		</if>
   		<if test="gender!=null">
@@ -32,6 +32,8 @@
   </select>
 ```
 
+!> test中 #{} 其实都是拿的参数的值，我们都是通过参数对sql语句做出的一些变数，test中拿参数的值不需要在写#{}
+
 ## Where
 
     上面示例中，where后面跟了1=1,mybatis觉得这种处理方式不雅，加入where标签。可以智能识别 `and` 和`or`,把多出来的and或者or去掉
@@ -40,7 +42,7 @@
 <select id="selectAllSearch" resultType="User">
     select * from user 
     <where>
-      <if test="name!=null">
+      <if test="userName!=null">
         and user_name like #{userName}
       </if>
       <if test="gender!=null">
