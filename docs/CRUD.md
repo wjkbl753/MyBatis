@@ -30,7 +30,7 @@ public interface UserMapper {
 </mapper> 
 ```
 
-!>总结：在select标签中，`id`,`resultType`为必须属性
+!>总结：在select标签中，`id`为必须属性,`resultType`和`resultMap`必须2选一
 当要返回`List<User>`时，resultType的值还应该是User
 还有一个重要属性为`resultMap`，随后介绍
 
