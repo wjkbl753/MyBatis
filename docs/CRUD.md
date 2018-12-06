@@ -30,8 +30,8 @@ public interface UserMapper {
 </mapper> 
 ```
 
-!>总结：在select标签中，`id`为必须属性,`resultType`和`resultMap`必须2选一
-当要返回`List<User>`时，resultType的值还应该是User
+!>总结：在select标签中，`id`为必须属性,`resultType`和`resultMap`必须二选一
+当要返回``User`时，时，resultType的值应该是com.weixin.bean.User 当要返回`List<User>`时，resultType的值还应该是com.weiixn.bean.User
 还有一个重要属性为`resultMap`，随后介绍
 
 
