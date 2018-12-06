@@ -2,7 +2,7 @@
 
 ```java
 public interface UserMapper {
-	public User selectById(int id);
+	  User selectById(int id);
 }
 ```
 ```xml
@@ -38,15 +38,15 @@ public interface UserMapper {
 ## 示例： 增加，删除，修改，(写法基本一致)
 
 ```java
-public boolean insert(User user);
-public boolean deleteById(int id);
-public boolean update(User user);
+boolean insert(User user);
+boolean deleteById(int id);
+boolean update(User user);
 ```
 或
 ```java
-public int insert(User user);
-public int deleteById(int id);
-public int update(User user);
+int insert(User user);
+int deleteById(int id);
+int update(User user);
 ```
 
 ```xml

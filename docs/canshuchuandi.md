@@ -8,8 +8,8 @@
 ## 单个参数-参数为map，和bean
 
 ```java
-  public List<User>selectAllByConditionMap(Map map);
-  public List<User>selectAllByConditionBean(User user);
+   List<User>selectAllByConditionMap(Map map);
+   List<User>selectAllByConditionBean(User user);
 ```
 ```xml
   <select id="selectAllByCondition" resultType="User">
@@ -31,7 +31,7 @@
     `最优方案：我们可以使用注解(@Param("键名"))指定map的键名：`
 
 ```java
-  public List<User>selectAllByCondition(@Param("id")int id,@Param("userName")String userName);
+   List<User>selectAllByCondition(@Param("id")int id,@Param("userName")String userName);
 ```
 ```xml
   <select id="selectAllByCondition" resultType="User">
