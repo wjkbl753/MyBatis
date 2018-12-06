@@ -66,4 +66,6 @@ public int update(User user);
 session.commit();
 ```
 
+!>主键自增操作中，如果新增加的id想回填到user对象，需要加2个属性   useGeneratedKeys="true" keyProperty="id"
+
 !>总结：增加删除修改标签中，只有id属性是必须的，如果java接口上类型是boolean，那么结果就是true或者false，如果接口上写int，返回结果就是操作行数
