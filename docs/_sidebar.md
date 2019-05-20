@@ -12,6 +12,8 @@
     * [概述](gaishu)
     * [CRUD](CRUD)
     * [参数传递](canshuchuandi)
+    * [sql片段](sqlpianduan)
+    * [$,#,模糊查询](mohuchaxun)
 
 * 🙈 进阶用法
 

@@ -78,7 +78,7 @@
 
 ## Trim
 
-trim 可在之前之后都加元素，可代替where或者set(但是不建议)
+trim 可在之前之后都加元素，可代替where或者set
 
 ```xml
   <select id="selectAllSearch" resultType="User">
@@ -119,6 +119,10 @@ trim 可在之前之后都加元素，可代替where或者set(但是不建议)
 
 示例： 删除复选框选中的多行数据：
 
+```java
+    boolean deleteBatch(@Param("ids") Integer[] ids);
+```
+
 ```xml
 <delete id="deleteAll">
   delete from user 
@@ -130,4 +134,6 @@ trim 可在之前之后都加元素，可代替where或者set(但是不建议)
 </where>
 </delete>
 ```
+
+!> 注意上边collection的值，不要写#{ids}
 

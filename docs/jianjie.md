@@ -2,4 +2,8 @@
 
 ## 本文档定位?
 
-> 本文档一切以实际应用为出发点，，如果想对MyBatis框架有更加深入的了解，请移步至[官方文档](http://www.mybatis.org/mybatis-3/zh/index.html)： 
+> 因框架部分有很多特性实际开发过程中根本用不到，本文档本着能让同学快速学会框架为主要目的，一切以实际应用为出发点，如果想对MyBatis框架有更加详细的了解，请移步至[官方文档](http://www.mybatis.org/mybatis-3/zh/index.html)： 
+
+## 什么是Mybatis？
+
+> Mybatis是一个半ORM（对象关系映射）框架，它内部封装了JDBC，开发时只需要关注SQL语句本身，不需要花费精力去处理加载驱动、创建连接、创建statement等繁杂的过程。程序员直接编写原生态sql，可以严格控制sql执行性能，灵活度高
