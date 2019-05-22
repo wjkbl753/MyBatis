@@ -135,5 +135,4 @@ trim 可在之前之后都加元素，可代替where或者set
 </delete>
 ```
 
-!> 注意上边collection的值，不要写#{ids}
 

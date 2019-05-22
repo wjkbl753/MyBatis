@@ -18,6 +18,8 @@
 * 🙈 进阶用法
 
      * [动态SQL](dongtaiSQL)
+     * [多表查询](duobiaochaxun)
+     * [ResultMap](ResultMap)
      * [复杂映射](fuzayingshe)
      * [缓存](huancun)
      * [mybatis三剑客](sanjianke)
