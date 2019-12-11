@@ -54,7 +54,7 @@ INSERT INTO `user` VALUES ('3', '小花', '1', 'xiaohua@163.com');
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
   <!--<typeAliases>
-      <package name="com.weixin.vo"/>
+      <package name="com.woyuno.vo"/>
   </typeAliases> -->
   <environments default="development">
     <environment id="development">
@@ -108,11 +108,11 @@ interface UserMapper {
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- namespace必须是接口名的全类名 -->
-<mapper namespace="com.weixin.mapper.UserMapper">
+<mapper namespace="com.woyuno.mapper.UserMapper">
 <!-- id属性为必须属性，值为接口中的方法名， 需要resultType指明返回类型(默认需要全类名，
 虽然可以通过别名设置只写类名，但是不建议)，resultType指返回的类型，返回User，List<User> 返回的类型
-都应该是com.weixin.bean.User-->
-  <select id="selectAll" resultType="com.weixin.bean.User">
+都应该是com.woyuno.bean.User-->
+  <select id="selectAll" resultType="com.woyuno.bean.User">
     select * from user
   </select>
 </mapper>

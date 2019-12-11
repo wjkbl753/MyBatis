@@ -28,7 +28,7 @@
 
 ```xml
 <typeAliases>
-  <typeAlias alias="User" type="com.weixin.User"/>
+  <typeAlias alias="User" type="com.woyuno.User"/>
 </typeAliases>
 ```
 
@@ -36,7 +36,7 @@
 
 ```xml
 <typeAliases>
-  <typeAlias type="com.weixin.User"/>
+  <typeAlias type="com.woyuno.User"/>
 </typeAliases>
 ```
 
@@ -46,7 +46,7 @@
 
 ```xml
 <typeAliases>
-    <package name="com.weixin.bean"/>
+    <package name="com.woyuno.bean"/>
 </typeAliases>
 ```
 

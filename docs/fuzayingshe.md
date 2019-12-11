@@ -68,7 +68,7 @@ private ClassRoom classRoom;
   	<result property="userName" column="user_name"/>
   	<result property="gender" column="gender"/>
   	<result property="email" column="email"/>
-  	<association property="classRoom" column="c_id" select="com.weixin.dao.ClassRoomMapper.selectById"></association>
+  	<association property="classRoom" column="c_id" select="com.woyuno.dao.ClassRoomMapper.selectById"></association>
   </resultMap>
   
    <select id="selectUserClassRoomById" resultMap="userClassRoomResultMap3" >
@@ -187,7 +187,7 @@ private List<User> userList;
    <resultMap type="ClassRoom" id="classRoomUserResultMap2">
   	<id property="cId" column="c_id"/>
   	<result property="name" column="name"/>
-  	<collection property="userList" select="com.weixin.dao.UserMapper.selectUsersByClassRoomId" column="c_id"></collection>
+  	<collection property="userList" select="com.woyuno.dao.UserMapper.selectUsersByClassRoomId" column="c_id"></collection>
   </resultMap>
   
   <select id="selectClassRoomUserByIdStep" resultMap="classRoomUserResultMap2">

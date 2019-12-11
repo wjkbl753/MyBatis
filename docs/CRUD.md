@@ -6,7 +6,7 @@ public interface UserMapper {
 }
 ```
 ```xml
-<mapper namespace="com.weixin.dao.UserMapper">
+<mapper namespace="com.woyuno.dao.UserMapper">
   <select id="selectById" resultType="User">
   		select * from user where id=#{id}
   </select>   
@@ -23,7 +23,7 @@ public interface UserMapper {
 }
 ```
 ```xml
-<mapper namespace="com.weixin.dao.UserMapper">
+<mapper namespace="com.woyuno.dao.UserMapper">
    <select id="selectAll" resultType="User">
   	 select * from user
   </select>  
@@ -31,7 +31,7 @@ public interface UserMapper {
 ```
 
 !>总结：在select标签中，`id`为必须属性,`resultType`和`resultMap`必须二选一
-当要返回`User`时，时，`resultType`的值应该是com.weixin.bean.User 当要返回`List<User>`时，resultType的值还应该是com.weiixn.bean.User
+当要返回`User`时，时，`resultType`的值应该是com.woyuno.bean.User 当要返回`List<User>`时，resultType的值还应该是com.woyuno.bean.User
 还有一个重要属性为`resultMap`，随后介绍
 
 

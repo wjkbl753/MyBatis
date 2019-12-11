@@ -35,7 +35,7 @@ user表添加一个外键classroom_id
 根据id 查询班级信息
 
 ```xml
-<select id="getClassRoom" resultType="com.weixin.bean.ClassRoom">
+<select id="getClassRoom" resultType="com.woyuno.bean.ClassRoom">
     select classroom.*
     from user
     left join classroom on user.classroom_id=classroom.id
