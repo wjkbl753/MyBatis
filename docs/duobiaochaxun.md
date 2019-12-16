@@ -38,7 +38,13 @@ user表添加一个外键classroom_id
 差询班级名是'二班'的班级的所有学生的信息
 
 ```xml
-
+<select id="selectByClassroomName" resultType="com.woyuno.bean.User">
+	select user.*
+	from user
+	left join classroom
+	on user.classroom_id=classroom.id
+	where classroom.name=#{name}
+</select>
 ```
 
 > 上面的案例虽然都是多表联合查询，但是数据来自其中一张表，我们可以使用resultType，那如果需要查询的信息来自2张表呢？
