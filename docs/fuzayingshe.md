@@ -30,7 +30,11 @@ private ClassRoom classRoom;
   	</association>
  </resultMap>
  <select id="selectUserClassRoomById" resultMap="userClassRoomResultMap2" >
-  		select * from user where id=#{id}
+	 select *,user.id uid,classroom.id cid
+	 from user
+	 left join classroom
+	 on user.classroom_id=classroom.id
+	 where user.id=#{id}
   </select> 
 
 <!-- select标签写法不变  -->
